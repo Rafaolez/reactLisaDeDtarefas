@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    
+}
+.DiviviDeTarefa{
+    margin-top: 2%;
+    width: 61%;
+    height: 3rem;
+    margin-left: 18%;
+    border-radius: 0.5rem;
+    background-color: #D9D9D9;
+    border: #D9D9D9;
+    list-style-type: none;
+    font-size: 151%;
+    display: flex;
+    align-items: center;
+}
+.divMAiorMEnu{
+    width: 100%;
+    background-color: #D9D9D9;
+    height: 4rem;
+    margin-bottom: 1rem;    
+}
+.Texto{
+    font-size: 176%;
+    display: flex;
+    justify-content: center;
+   align-content: center
+}
+.betnX{
+    background-color: #D9D9D9;
+    border: #D9D9D9;
+}

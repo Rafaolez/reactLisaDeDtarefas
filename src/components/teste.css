@@ -1,0 +1,13 @@
+.Ativi{
+    text-decoration: line-through;
+    background-color: #34ff01;
+    border: #3cff00;
+}
+.Desativo{
+    background-color: #D9D9D9;
+    border: #D9D9D9;
+}
+.icon1 .icon2{
+    background-color: #D9D9D9;
+    border: #D9D9D9;
+}

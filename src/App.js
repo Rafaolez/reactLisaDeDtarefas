@@ -1,48 +1,31 @@
-import { useEffect, useState } from "react";
-
-
+import Domingo from "./components/Domingo";
+import Quarta from "./components/Quarta";
+import Quinta from "./components/Quinta";
+import Sabado from "./components/Sabado";
+import Sexta from "./components/Sexta";
+import Terça from "./components/Terça";
+import Teste from "./components/TesteParaDividir"
+import Stile from "./components/css/global.module.css"
 function App() {
-
-  const [listaTarefas, setListaTarefas] = useState ( [] );
-  const [ tarefa, setTarefas] = useState ( { id: '', texto: "", status: "" } );
-
-  function addTarefas(){
-      if(tarefa.texto !== ""){
-        setListaTarefas([...listaTarefas, tarefa ]);
-      }
-  }
-  function excluirTarefa(id) {  
-    const novaLista = listaTarefas.filter((tarefa) => tarefa.id !== id);
-    setListaTarefas(novaLista);
-  }
-
-  function statusTarefa(id, status){
-      const index = listaTarefas.findIndex( ( tarefa ) => tarefa.id === id);
-      const novoStatus = status;
-      listaTarefas[index].status = !status;
-      setListaTarefas([...listaTarefas]);
-  }
-
-  useEffect(() => {
-    setTarefas({id: "", texto: "", status: ""});
-  }, [listaTarefas])
 
   return (
     <>
-      <header>
-        <h1>React DO</h1>
-      </header>
-      <div>
-          <input type="text" name="tarefa" placeholder="Digite sua tarefa" value={tarefa.texto} onChange={ (e) => setTarefas( {id: Math.random(), texto: e.target.value, status: false} ) }/>
-          <button onClick={addTarefas}>Adicionar</button>
-      </div>
-      <div>
-            <ul>
-                {listaTarefas.map( (item, index) => (
-                  <li key={index}>{item.texto} <button onClick={ () => statusTarefa(item.id, item.status) }>{item.status ? 'Concluida' : 'Não concluida'}</button> <button onClick={ () => excluirTarefa(item.id) }>Excluir</button></li>
-                ))}
-            </ul>
-      </div>
+    <div className={Stile.divMAiorMEnu}>
+      <span className={Stile.Texto}>Tarefas para fazer </span>
+    </div>
+      <Domingo/>
+      <br/>
+      <Teste/>
+      <br/>
+      <Terça/>
+      <br/>
+      <Quarta/>
+      <br/>
+      <Quinta/>
+      <br/>
+      <Sexta/>
+      <br/>
+      <Sabado/>
     </>
   );
 }
